@@ -1,17 +1,25 @@
-import { useSettings } from "@/store/settingStore";
+import { useSettingActions, useSettings } from "@/store/settingStore";
+import { Button } from "@/ui/button";
 import { cn } from "@/utils";
+import { Moon, Sun } from "lucide-react";
 import type { ReactNode } from "react";
+import { ThemeMode } from "#/enum";
 import AccountDropdown from "../components/account-dropdown";
 import BreadCrumb from "../components/bread-crumb";
 import NoticeButton from "../components/notice";
-import SettingButton from "../components/setting-button";
 
 interface HeaderProps {
 	leftSlot?: ReactNode;
 }
 
 export default function Header({ leftSlot }: HeaderProps) {
-	const { breadCrumb } = useSettings();
+	const settings = useSettings();
+	const { breadCrumb, themeMode } = settings;
+	const { setSettings } = useSettingActions();
+
+	const toggleTheme = () => {
+		setSettings({ ...settings, themeMode: themeMode === ThemeMode.Light ? ThemeMode.Dark : ThemeMode.Light });
+	};
 	return (
 		<header
 			data-slot="slash-layout-header"
@@ -28,8 +36,10 @@ export default function Header({ leftSlot }: HeaderProps) {
 			</div>
 
 			<div className="flex items-center gap-1">
+				<Button variant="ghost" size="icon" className="rounded-full" onClick={toggleTheme}>
+					{themeMode === ThemeMode.Dark ? <Sun size={20} /> : <Moon size={20} />}
+				</Button>
 				<NoticeButton />
-				<SettingButton />
 				<AccountDropdown />
 			</div>
 		</header>
