@@ -26,7 +26,7 @@ export default function Header({ leftSlot }: HeaderProps) {
 			className={cn(
 				"sticky top-0 left-0 right-0 z-app-bar",
 				"flex items-center justify-between px-2 grow-0 shrink-0",
-				"bg-background/60 backdrop-blur-xl",
+				"bg-background/60 dark:bg-[#141414] backdrop-blur-xl",
 				"h-[var(--layout-header-height)] ",
 			)}
 		>

@@ -33,7 +33,7 @@ export const NavRootItem = (item: NavItemProps) => {
 			)}
 
 			{/* Title */}
-			<span style={navItemStyles.title} className="text-center! text-xs! mt-1">
+			<span style={{ ...navItemStyles.title, ...(item.active && item.depth === 1 && { fontWeight: 700 }) }} className="text-center! text-xs! mt-1">
 				{t(item.title)}
 			</span>
 		</>

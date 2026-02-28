@@ -23,7 +23,7 @@ export function NavItem(item: NavItemProps) {
 			{/* Texts */}
 			<span style={navItemStyles.texts} className="min-h-[24px]">
 				{/* Title */}
-				<span style={navItemStyles.title}>{t(title)}</span>
+				<span style={{ ...navItemStyles.title, ...(active && depth === 1 && { fontWeight: 700 }) }}>{t(title)}</span>
 
 				{/* Caption */}
 				{caption && (

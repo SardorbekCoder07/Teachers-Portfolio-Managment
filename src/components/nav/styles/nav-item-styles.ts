@@ -31,7 +31,7 @@ export const navItemStyles: NavItemStyles = {
 		WebkitLineClamp: 1,
 		overflow: "hidden",
 		textOverflow: "ellipsis",
-		fontSize: "0.875rem",
+		fontSize: "1rem",
 		fontWeight: 500,
 		textAlign: "left",
 		lineHeight: 18 / 12,

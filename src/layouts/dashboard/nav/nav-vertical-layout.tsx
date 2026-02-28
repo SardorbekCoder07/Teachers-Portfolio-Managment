@@ -31,7 +31,7 @@ export function NavVerticalLayout({ data, className }: Props) {
 		<nav
 			data-slot="slash-layout-nav"
 			className={cn(
-				"fixed inset-y-0 left-0 flex-col h-full bg-background border-r border-dashed z-nav transition-[width] duration-300 ease-in-out",
+				"fixed inset-y-0 left-0 flex-col h-full bg-background dark:bg-[#141414] border-r border-dashed dark:border-[#8C8C8C] z-nav transition-[width] duration-300 ease-in-out",
 				className,
 			)}
 			style={{
@@ -39,11 +39,11 @@ export function NavVerticalLayout({ data, className }: Props) {
 			}}
 		>
 			<div
-				className={cn("relative flex items-center py-4 px-2 h-[var(--layout-header-height)] ", {
+				className={cn("relative flex items-center justify-center py-4 px-2 h-[var(--layout-header-height)] ", {
 					"justify-center": themeLayout === ThemeLayout.Mini,
 				})}
 			>
-				<div className="flex items-center justify-center gap-2 overflow-hidden">
+				<div className="flex items-center justify-center gap-2 overflow-" >
 					<img
 						src={qdtuLogo}
 						alt="QDTU"
@@ -65,7 +65,7 @@ export function NavVerticalLayout({ data, className }: Props) {
 					variant="outline"
 					size="icon"
 					onClick={handleToggle}
-					className="h-7 w-7 absolute right-0 translate-x-1/2"
+					className="h-7 w-7 absolute right-0 rounded-full translate-x-1/2 dark:bg-[#141414] dark:border-[#8C8C8C]"
 				>
 					{themeLayout === ThemeLayout.Mini ? (
 						<Icon icon="lucide:arrow-right-to-line" size={12} />
@@ -75,7 +75,7 @@ export function NavVerticalLayout({ data, className }: Props) {
 				</Button>
 			</div>
 
-			<ScrollArea className={cn("h-[calc(100vh-var(--layout-header-height))] px-2 bg-background")}>
+			<ScrollArea className={cn("h-[calc(100vh-var(--layout-header-height))] px-2 bg-background dark:bg-[#141414]")}>
 				{themeLayout === ThemeLayout.Mini ? <NavMini data={data} /> : <NavVertical data={data} />}
 			</ScrollArea>
 		</nav>

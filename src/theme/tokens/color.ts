@@ -131,13 +131,13 @@ export const darkColorTokens = {
 	common: commonColors,
 	action: actionColors,
 	text: {
-		primary: commonColors.white,
-		secondary: paletteColors.gray[500],
+		primary: "#8C8C8C",
+		secondary: "#8C8C8C",
 		disabled: paletteColors.gray[600],
 	},
 	background: {
-		default: commonColors.black,
-		paper: commonColors.black,
-		neutral: "#27272A",
+		default: "#000000",
+		paper: "#141414",
+		neutral: "#141414",
 	},
 };

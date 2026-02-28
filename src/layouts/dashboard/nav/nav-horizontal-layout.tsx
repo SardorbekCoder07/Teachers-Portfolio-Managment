@@ -8,10 +8,10 @@ export function NavHorizontalLayout({ data }: NavProps) {
 		<nav
 			data-slot="slash-layout-nav"
 			className={
-				"w-full bg-background z-app-bar sticky top-[var(--layout-header-height)] left-0 right-0 grow-0 shrink-0"
+				"w-full bg-background dark:bg-[#141414] z-app-bar sticky top-[var(--layout-header-height)] left-0 right-0 grow-0 shrink-0"
 			}
 		>
-			<ScrollArea className="whitespace-nowrap px-2 bg-background">
+			<ScrollArea className="whitespace-nowrap px-2 bg-background dark:bg-[#141414]">
 				<NavHorizontal data={data} />
 				<ScrollBar orientation="horizontal" />
 			</ScrollArea>

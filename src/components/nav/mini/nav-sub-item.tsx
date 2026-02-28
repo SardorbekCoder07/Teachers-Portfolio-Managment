@@ -17,7 +17,7 @@ export const NavSubItem = (item: NavItemProps) => {
 			</span>
 
 			{/* Title */}
-			<span style={navItemStyles.title} className="flex-auto">
+			<span style={{ ...navItemStyles.title, ...(item.active && item.depth === 1 && { fontWeight: 700 }) }} className="flex-auto">
 				{t(item.title)}
 			</span>
 

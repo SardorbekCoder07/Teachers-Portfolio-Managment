@@ -21,6 +21,10 @@
     border-color: rgba(var(--colors-palette-gray-500Channel) / var(--opacity-border)) ;
   }
 
+  html {
+    font-size: 14px;
+  }
+
   body {
     background-color: var(--background);
   }
@@ -97,35 +101,35 @@
 
 /* Shadcn UI Dark Theme */
 [data-theme-mode="dark"] {
-  --background: var(--colors-common-black);
-  --foreground: var(--colors-common-white);
-  --card: var(--colors-common-black);
-  --card-foreground: var(--colors-common-white);
-  --popover: var(--colors-common-black);
-  --popover-foreground: var(--colors-common-white);
+  --background: #000000;
+  --foreground: #8C8C8C;
+  --card: #141414;
+  --card-foreground: #8C8C8C;
+  --popover: #141414;
+  --popover-foreground: #8C8C8C;
   --primary: var(--colors-palette-primary-default);
   --primary-foreground: var(--colors-palette-primary-darker);
-  --secondary: var(--colors-background-neutral);
-  --secondary-foreground: var(--colors-palette-gray-500);
-  --muted: var(--colors-background-neutral);
-  --muted-foreground: var(--colors-palette-gray-400);
-  --accent: var(--colors-background-neutral);
-  --accent-foreground: var(--colors-palette-gray-500);
+  --secondary: #141414;
+  --secondary-foreground: #8C8C8C;
+  --muted: #141414;
+  --muted-foreground: #8C8C8C;
+  --accent: #141414;
+  --accent-foreground: #8C8C8C;
   --destructive: var(--colors-palette-error-default);
-  --border: rgba(var(--colors-palette-gray-500Channel)/ var(--opacity-border));
-  --input: rgba(var(--colors-palette-gray-500Channel)/ var(--opacity-border));
+  --border: #8C8C8C;
+  --input: #8C8C8C;
   --ring: var(--colors-palette-primary-default);
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: var(--colors-background-neutral);
-  --sidebar-foreground: var(--colors-common-white);
+  --sidebar: #141414;
+  --sidebar-foreground: #8C8C8C;
   --sidebar-primary: var(--colors-palette-primary-default);
   --sidebar-primary-foreground: var(--colors-palette-primary-darker);
-  --sidebar-accent: var(--colors-background-neutral);
-  --sidebar-accent-foreground: var(--colors-common-white);
+  --sidebar-accent: #141414;
+  --sidebar-accent-foreground: #8C8C8C;
   --sidebar-border: rgba(var(--colors-palette-gray-500Channel)/ var(--opacity-border));
   --sidebar-ring: var(--colors-palette-primary-default);
 }

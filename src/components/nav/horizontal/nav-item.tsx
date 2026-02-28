@@ -17,7 +17,7 @@ export const NavItem = (item: NavItemProps) => {
 			</span>
 
 			{/* Title */}
-			<span style={navItemStyles.title} className="ml-2 block! flex-auto!">
+			<span style={{ ...navItemStyles.title, ...(item.active && item.depth === 1 && { fontWeight: 700 }) }} className="ml-2 block! flex-auto!">
 				{t(item.title)}
 			</span>
 
