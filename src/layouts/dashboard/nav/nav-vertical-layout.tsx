@@ -8,6 +8,7 @@ import { ThemeLayout } from "@/types/enum";
 import { Button } from "@/ui/button";
 import { ScrollArea } from "@/ui/scroll-area";
 import { cn } from "@/utils";
+import qdtuLogo from "@/assets/images/qdtu.png";
 
 type Props = {
 	data: NavProps["data"];
@@ -42,14 +43,18 @@ export function NavVerticalLayout({ data, className }: Props) {
 					"justify-center": themeLayout === ThemeLayout.Mini,
 				})}
 			>
-				<div className="flex items-center justify-center">
+				<div className="flex items-center justify-center gap-2 overflow-hidden">
+					<img
+						src={qdtuLogo}
+						alt="QDTU"
+						className="shrink-0 rounded"
+						style={{ width: 32, height: 32, objectFit: "contain" }}
+					/>
 					<span
-						className="text-xl font-bold transition-all duration-300 ease-in-out"
+						className="text-xl font-bold transition-all duration-300 ease-in-out overflow-hidden whitespace-nowrap"
 						style={{
 							opacity: themeLayout === ThemeLayout.Mini ? 0 : 1,
-							maxWidth: themeLayout === ThemeLayout.Mini ? 0 : "auto",
-							whiteSpace: "nowrap",
-							marginLeft: themeLayout === ThemeLayout.Mini ? 0 : "8px",
+							maxWidth: themeLayout === ThemeLayout.Mini ? 0 : "160px",
 						}}
 					>
 						{GLOBAL_CONFIG.appName}

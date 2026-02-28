@@ -24,7 +24,7 @@ export type GlobalConfig = {
  * Please don't use the import.meta.env to get the configuration, use the GLOBAL_CONFIG instead
  */
 export const GLOBAL_CONFIG: GlobalConfig = {
-	appName: "Sardorbek Admin",
+	appName: "QDTU Teachers",
 	appVersion: packageJson.version,
 	defaultRoute: "/dashboard",
 	publicPath: "/",

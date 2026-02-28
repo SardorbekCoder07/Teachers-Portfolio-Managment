@@ -1,10 +1,15 @@
 import { GLOBAL_CONFIG } from "@/global-config";
 import { useUserToken } from "@/store/userStore";
+import { useEffect } from "react";
 import { Navigate } from "react-router";
 import LoginForm from "./login-form";
 
 function LoginPage() {
 	const token = useUserToken();
+
+	useEffect(() => {
+		document.title = "Login | QDTU";
+	}, []);
 
 	if (token.accessToken) {
 		return <Navigate to={GLOBAL_CONFIG.defaultRoute} replace />;
