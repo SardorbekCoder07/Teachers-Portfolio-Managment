@@ -18,10 +18,9 @@ export default function AccountDropdown() {
 	const logout = () => {
 		try {
 			clearUserInfoAndToken();
+			replace("/auth/login");
 		} catch (error) {
 			console.log(error);
-		} finally {
-			replace("/auth/login");
 		}
 	};
 
