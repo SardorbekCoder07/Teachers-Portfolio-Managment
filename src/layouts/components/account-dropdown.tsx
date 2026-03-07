@@ -11,14 +11,12 @@ import {
 import { NavLink } from "react-router";
 
 export default function AccountDropdown() {
-	const { replace } = useRouter();
 	const { username, email, avatar } = useUserInfo();
 	const { clearUserInfoAndToken } = useUserActions();
 
 	const logout = () => {
 		try {
 			clearUserInfoAndToken();
-			replace("/auth/login");
 		} catch (error) {
 			console.log(error);
 		}
