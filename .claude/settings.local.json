@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls:*)",
+      "Bash(rm:*)",
+      "Bash(git commit:*)",
+      "Bash(git:*)",
+      "Bash(xargs grep:*)",
+      "Bash(pnpm add:*)",
+      "Bash(npx shadcn@latest:*)",
+      "Bash(npx tsc:*)",
+      "Bash(find C:/Users/Sardor/Desktop/project/Teachers-Portfolio-Managment-main/src -type f \\\\\\(-name *.ts -o -name *.tsx -o -name *.js -o -name *.jsx \\\\\\))",
+      "Bash(node:*)",
+      "Bash(gh auth:*)"
+    ]
+  }
+}
